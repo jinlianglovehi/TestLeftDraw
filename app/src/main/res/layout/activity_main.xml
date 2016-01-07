@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<!--
+    <akiyama.library.SwipeItemLayout
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"/>-->
+
+
+    <com.doudou.cn.testleftdraw.utils.SwipeRecyclerView
+        android:id="@+id/swipeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
