@@ -125,9 +125,17 @@ public class SwipeItemLayout extends LinearLayout {
         mView = View.inflate(context, R.layout.layout_custem_swipe, this);//附加merge布局
         mContentLl = (LinearLayout) mView.findViewById(R.id.item_content_ll);//具体内容
         mMenuLl = (LinearLayout) mView.findViewById(R.id.item_menu_ll);//需要添加的菜单项目
+        resetView();
     }
 
+    int newUpScrollX =0;
+    public void resetView(){
+        if(newUpScrollX!=0){
+            smoothScrollTo(0, 0);
+        }
 
+
+    }
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         int x = (int) event.getX();
@@ -174,7 +182,7 @@ public class SwipeItemLayout extends LinearLayout {
                         mSwipeClick.swipeLayoutClickEvent();
                     }
                 }
-                int newUpScrollX = 0;
+                 newUpScrollX = 0;
                 if (scrollX - mHolderWidth * 0.5 > 0) {
                     newUpScrollX = mHolderWidth;
                 }
